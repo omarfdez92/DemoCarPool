@@ -46,7 +46,7 @@ class PersonAdapter(context : Context, employees : List<Persons>) : BaseAdapter(
         val resourceId  = context.resources.getIdentifier(employee.image, "drawable", context.packageName)
         holder.employeeImage?.setImageResource(resourceId)
         holder.employeeName?.text = employee.name
-        holder.employeeField?.text = employee.medical_field
+        holder.employeeField?.text = employee.tcsLocation
 
         return employeeView
     }

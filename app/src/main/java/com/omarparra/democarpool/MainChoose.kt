@@ -10,7 +10,7 @@ class MainChoose : AppCompatActivity() {
     fun driverClicked(view: View){
 
         val intentDriver = Intent(this, OptionActivity::class.java)
-        intentDriver.putExtra("option123", "Driver")
+        intentDriver.putExtra("option123", "Invite a Rider")
         startActivity(intentDriver)
 
     }
@@ -18,7 +18,7 @@ class MainChoose : AppCompatActivity() {
     fun riderBtn(view: View){
 
         val intentRider = Intent(this, OptionActivity::class.java)
-        intentRider.putExtra("option123", "Rider")
+        intentRider.putExtra("option123", "Available Drivers")
         startActivity(intentRider)
 
     }

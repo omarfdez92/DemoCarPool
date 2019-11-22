@@ -5,7 +5,7 @@ package com.omarparra.democarpool
  * @date 11/7/19
  */
 
-class Persons(val name: String, val medical_field: String, val image: String){
+class Persons(val name: String, val tcsLocation: String, val image: String){
     override fun toString(): String {
         return name
     }

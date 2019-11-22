@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "591504639896",
+    "firebase_url": "https://tatacarpooldemo.firebaseio.com",
+    "project_id": "tatacarpooldemo",
+    "storage_bucket": "tatacarpooldemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591504639896:android:f4e79b926f0f9ede29cded",
+        "android_client_info": {
+          "package_name": "com.omarparra.democarpool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591504639896-914r2798r6csn0nujr3angdq6383o055.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbLa8AtSfS0_KSUdF9K2rUgD8Mg15S97Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591504639896-914r2798r6csn0nujr3angdq6383o055.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

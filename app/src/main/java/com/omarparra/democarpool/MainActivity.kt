@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
     fun loginClicked(view: View){
 
         val email = emailText.text.toString()

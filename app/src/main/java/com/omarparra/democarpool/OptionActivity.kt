@@ -27,7 +27,7 @@ class OptionActivity : AppCompatActivity() {
             val employee = DataService.employees[position]
             val intentEmployeeData = Intent(this, EmployeeDataActivity::class.java)
             intentEmployeeData.putExtra("employeeName", employee.name)
-            intentEmployeeData.putExtra("employeeField", employee.medical_field)
+            intentEmployeeData.putExtra("employeeField", employee.tcsLocation)
             startActivity(intentEmployeeData)
 
 
