@@ -7,7 +7,7 @@ import android.view.View
 
 class MainChoose : AppCompatActivity() {
 
-    fun driverClicked(view: View){
+    fun driverSelected(view: View){
 
         val intentDriver = Intent(this, OptionActivity::class.java)
         intentDriver.putExtra("option123", "Invite a Rider")
@@ -15,11 +15,25 @@ class MainChoose : AppCompatActivity() {
 
     }
 
-    fun riderBtn(view: View){
+    fun riderSelected(view: View){
 
         val intentRider = Intent(this, OptionActivity::class.java)
         intentRider.putExtra("option123", "Available Drivers")
         startActivity(intentRider)
+
+    }
+
+    fun goHomeBtn(view : View) {
+
+        val intentHome = Intent(this, HomeActivity::class.java)
+        startActivity(intentHome)
+
+    }
+
+    fun goFrescoBtn (view : View) {
+
+        val intentFresco = Intent(this, FrescoActivity::class.java)
+        startActivity(intentFresco)
 
     }
 

@@ -7,42 +7,35 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity" android:background="@drawable/blue_gradient">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:text="@string/demo_carpool"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="24dp" android:textSize="36sp"
-            android:textColor="#fff" android:layout_marginLeft="8dp" android:layout_marginRight="8dp"
-            android:id="@+id/textView" android:fontFamily="@font/montserrat"/>
     <ImageView
-            android:layout_width="0dp"
-            android:layout_height="250dp" app:srcCompat="@drawable/logtcs"
-            android:id="@+id/imageView" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="240dp"
+            android:layout_height="240dp" app:srcCompat="@drawable/logtcs"
+            android:id="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="parent" android:scaleType="fitXY"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="number|numberDecimal|textEmailAddress"
             android:ems="10"
-            android:id="@+id/emailText" android:layout_marginTop="16dp"
+            android:id="@+id/employeeIdTextView" android:layout_marginTop="40dp"
             app:layout_constraintTop_toBottomOf="@+id/imageView" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:hint="@string/enter_your_email" android:gravity="center" android:text="@string/plebes_gmail_com"/>
+            android:hint="@string/enter_your_email" android:gravity="center"
+            android:fontFamily="@font/montserrat"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/passwordText" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/emailText" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/employeeIdTextView" android:layout_marginStart="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
-            android:hint="@string/enter_your_password" android:gravity="center"/>
+            android:hint="@string/enter_your_password" android:gravity="center" android:fontFamily="@font/montserrat"/>
     <Button
             android:text="@string/log_in"
             android:layout_width="0dp"
@@ -52,14 +45,16 @@
             android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp" android:textSize="20sp"
-            android:background="@android:color/holo_blue_dark" android:textColor="#fff" android:onClick="loginClicked"/>
+            android:background="#3F51B5" android:textColor="#fff" android:onClick="loginClicked"
+            android:fontFamily="@font/montserrat"/>
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="180dp" app:srcCompat="@drawable/route"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:id="@+id/imageView3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintBottom_toBottomOf="parent" android:scaleType="centerCrop"/>
+            app:layout_constraintBottom_toBottomOf="parent" android:scaleType="fitXY"
+            app:srcCompat="@drawable/logodown" android:layout_marginBottom="8dp"/>
 
 </android.support.constraint.ConstraintLayout>
