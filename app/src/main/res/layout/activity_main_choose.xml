@@ -52,7 +52,7 @@
 
     <Button
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="180dp"
             android:id="@+id/driverBtn" android:background="@drawable/driver"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp"

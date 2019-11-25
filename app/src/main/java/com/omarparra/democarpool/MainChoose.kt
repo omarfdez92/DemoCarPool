@@ -17,7 +17,7 @@ class MainChoose : AppCompatActivity() {
 
     fun riderSelected(view: View){
 
-        val intentRider = Intent(this, OptionActivity::class.java)
+        val intentRider = Intent(this, RiderActivity::class.java)
         intentRider.putExtra("option123", "Available Drivers")
         startActivity(intentRider)
 
@@ -40,5 +40,6 @@ class MainChoose : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_choose)
+
     }
 }

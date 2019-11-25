@@ -12,23 +12,23 @@ class MainActivity : AppCompatActivity() {
 
     fun loginClicked(view: View){
 
-        /*val email = employeeIdTextView.text.toString()
+        val email = employeeIdTextView.text.toString()
         val password = passwordText.text.toString()
 
         if(email.isEmpty() && password.isEmpty()){
 
             Toast.makeText(this, "PLEASE FILL ALL THE FIELDS", Toast.LENGTH_SHORT).show()
 
-        }else if(email == "1688534" && password == "abc123"){*/
+        }else if(email == "1688534" && password == "abc123"){
 
             val intentWelcome = Intent(this,  WelcomeActivity::class.java)
             startActivity(intentWelcome)
 
-        /*}else{
+        }else{
 
             Toast.makeText(this, "WRONG EMAIL OR PASSWORD", Toast.LENGTH_SHORT).show()
 
-        }*/
+        }
 
     }
 
