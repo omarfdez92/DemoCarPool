@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         }else if(email == "plebes@gmail.com" && password == "abc123"){
 
-            val intentMainChoose = Intent(this, MainChoose::class.java)
-            startActivity(intentMainChoose)
+            val intentWelcome = Intent(this,  WelcomeActivity::class.java)
+            startActivity(intentWelcome)
 
         }else{
 
@@ -30,11 +30,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-    }
-
-    fun signInClicked (view: View) {
-        val intentSignIn = Intent(this, SignInActivity::class.java)
-        startActivity(intentSignIn)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
