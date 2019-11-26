@@ -71,7 +71,7 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
             android:layout_marginStart="8dp" android:fontFamily="@font/montserrat" android:textColor="#fff"
             android:background="#0B269B" android:textSize="18sp" android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/continueBtn"/>
+            app:layout_constraintBottom_toTopOf="@+id/continueBtn" android:onClick="goFrescoClick"/>
     <Button
             android:text="continue"
             android:layout_width="350dp"

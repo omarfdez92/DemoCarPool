@@ -28,5 +28,6 @@
         <item>22:00</item>
     </string-array>
     <string name="title_activity_rider_carpool">Map</string>
+    <string name="title_activity_tata_bus_detail">Map</string>
 
 </resources>

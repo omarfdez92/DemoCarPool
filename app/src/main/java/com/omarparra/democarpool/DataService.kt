@@ -21,4 +21,14 @@ object DataService {
         Persons("Karla Diaz", "Central Camionera", "avatarthree")
     )
 
+    val buses = listOf(
+        Buses("PeriNorte","Periferico Norte y Belisario","busone"),
+        Buses("Tetlan","Tetlan y Solidaridad","bustwo"),
+        Buses("Minerva","Vallarta y Lopez Mateos","busthree"),
+        Buses("Las Torres","Avenidad de las torres","busone"),
+        Buses("Mariano Otero", "Av. Mariano Otero","bustwo"),
+        Buses("Especial Tata 2","Av. iteso y Lopez Mateos","busthree"),
+        Buses("Tata 3", "Camino Real al Iteso","busone")
+    )
+
 }

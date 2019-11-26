@@ -16,7 +16,8 @@ class HomeActivity : AppCompatActivity() {
 
     fun tataBusSelected (view : View) {
 
-        //add tata bus task
+        val intentTataBus = Intent(this,TataBusActivity::class.java)
+        startActivity(intentTataBus)
 
     }
 

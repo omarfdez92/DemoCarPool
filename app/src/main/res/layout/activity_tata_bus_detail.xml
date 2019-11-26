@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-         xmlns:tools="http://schemas.android.com/tools"
-         xmlns:map="http://schemas.android.com/apk/res-auto"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         tools:context=".RiderCarpoolActivity">
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   xmlns:map="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".TataBusDetailActivity">
 
     <include
             layout="@layout/top_info"
@@ -16,7 +15,7 @@
             map:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-            android:text="Details"
+            android:text="Tata Bus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView10" android:layout_marginTop="8dp"
@@ -28,26 +27,26 @@
     <ImageView
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:id="@+id/employeeImage"
+            android:id="@+id/busImage"
             android:scaleType="centerCrop" map:layout_constraintTop_toBottomOf="@+id/textView10"
             android:layout_marginEnd="16dp" map:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginRight="16dp" android:layout_marginTop="8dp" map:srcCompat="@drawable/avatartwo"/>
+            android:layout_marginRight="16dp" android:layout_marginTop="8dp" map:srcCompat="@drawable/busone"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/employeeName"
-            tools:text="Roberto Esparza"
+            android:id="@+id/busName"
+            tools:text="PeriNorte"
             android:textSize="24sp" android:fontFamily="@font/montserrat"
-            map:layout_constraintTop_toTopOf="@+id/employeeImage"
+            map:layout_constraintTop_toTopOf="@+id/busImage"
             map:layout_constraintStart_toStartOf="@+id/map"
     />
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/employeeIdTextView"
+            android:id="@+id/busStartLocation"
             tools:text="Starting from Plaza del Sol" android:textSize="18sp" android:fontFamily="@font/montserrat"
-            map:layout_constraintTop_toBottomOf="@+id/employeeName"
-            map:layout_constraintStart_toStartOf="@+id/employeeName"/>
+            map:layout_constraintTop_toBottomOf="@+id/busName"
+            map:layout_constraintStart_toStartOf="@+id/busName"/>
 
 
     <fragment
@@ -59,7 +58,7 @@
             map:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
-            map:layout_constraintTop_toBottomOf="@+id/employeeImage"/>
+            map:layout_constraintTop_toBottomOf="@+id/busImage"/>
 
     <TextView
             android:text="Departing Time"
@@ -72,7 +71,7 @@
             android:textSize="18sp" android:textColor="#3F51B5"/>
 
     <TextView
-            android:text="09:20 hrs"
+            android:text="07:45 hrs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/hoursTextView" android:layout_marginTop="8dp"
@@ -92,7 +91,7 @@
             map:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="16dp"/>
 
     <TextView
-            android:text="32 Gems"
+            android:text="19 Gems"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/gemsTextView" android:layout_marginTop="8dp"
@@ -110,7 +109,7 @@
             map:layout_constraintTop_toBottomOf="@+id/hoursTextView"
             map:layout_constraintStart_toStartOf="@+id/departingTimeView"
             map:layout_constraintEnd_toEndOf="@+id/costTextView"
-            android:onClick="setTripClicked" android:background="#3F51B5" android:textColor="#fff"
+            android:background="#3F51B5" android:textColor="#fff"
             android:textSize="18sp" android:fontFamily="@font/montserrat"/>
 
 

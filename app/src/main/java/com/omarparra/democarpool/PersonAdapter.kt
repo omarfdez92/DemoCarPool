@@ -31,7 +31,7 @@ class PersonAdapter(context : Context, employees : List<Persons>) : BaseAdapter(
             //holder have references to the ids
             holder.employeeImage = employeeView.findViewById(R.id.employeeImage)
             holder.employeeName = employeeView.findViewById(R.id.employeeName)
-            holder.employeeField = employeeView.findViewById(R.id.employeeField)
+            holder.employeeField = employeeView.findViewById(R.id.employeeIdTextView)
 
             employeeView.tag = holder
 

@@ -31,6 +31,14 @@
                 android:value="@string/google_maps_key"/>
 
         <activity
+                android:name=".TataBusDetailActivity"
+                android:label="@string/title_activity_tata_bus_detail">
+        </activity>
+        <activity android:name=".TataBusActivity">
+        </activity>
+        <activity android:name=".DriverActivity">
+        </activity>
+        <activity
                 android:name=".RiderCarpoolActivity"
                 android:label="@string/title_activity_rider_carpool">
         </activity>

@@ -1,22 +1,23 @@
 package com.omarparra.democarpool
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.maps.*
-import com.google.android.gms.maps.model.*
 
-class RiderCarpoolActivity : AppCompatActivity(), OnMapReadyCallback {
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+
+class TataBusDetailActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
 
-    fun setTripClicked(view: View) {
-
-        //btn TODO....
-
-    }
 
     fun goHomeBtn(view: View) {
 
@@ -34,17 +35,16 @@ class RiderCarpoolActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_rider_carpool)
+        setContentView(R.layout.activity_tata_bus_detail)
 
-        val employeeDataName: String = intent.getStringExtra("employeeName")
-        val employeeDataField: String = intent.getStringExtra("employeeField")
+        val busDataName: String = intent.getStringExtra("busName")
+        val busDataLocation: String = intent.getStringExtra("busLocation")
 
-        val employeeName: TextView = findViewById(R.id.employeeName)
-        val employeeField: TextView = findViewById(R.id.employeeIdTextView)
+        val busName: TextView = findViewById(R.id.busName)
+        val busLocation: TextView = findViewById(R.id.busStartLocation)
 
-        employeeName.setText(employeeDataName)
-        employeeField.setText(employeeDataField)
-
+        busName.setText(busDataName)
+        busLocation.setText(busDataLocation)
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
@@ -64,7 +64,6 @@ class RiderCarpoolActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-
         // Add a marker in Sydney and move the camera
         val plazaGalerias = LatLng(20.6790942, -103.4391222)
         val tcsDestination = LatLng(20.7258227, -103.4898939)
@@ -80,8 +79,5 @@ class RiderCarpoolActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(plazaGalerias, 10.3f))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(tcsDestination, 10.3f))
-
     }
-
-
 }
