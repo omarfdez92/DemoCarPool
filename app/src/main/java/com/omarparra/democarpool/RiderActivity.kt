@@ -3,10 +3,11 @@ package com.omarparra.democarpool
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_rider.*
 import java.util.*
 
 class RiderActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class RiderActivity : AppCompatActivity() {
 
             Toast.makeText(parent.getContext(),
                 "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(),
-                Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT).show()
 
 
         }
@@ -27,6 +28,19 @@ class RiderActivity : AppCompatActivity() {
         override fun onNothingSelected(parent: AdapterView<*>) {
             // Another interface callback
         }
+    }
+
+    fun findDriver (view : View) {
+
+        //when they sent the data to next intent or data base this will work
+        val intentOption = Intent(this, OptionActivity::class.java)
+        intentOption.putExtra("optionDestination", originEditText.toString())
+        intentOption.putExtra("optionDate", dateTv.toString())
+        intentOption.putExtra("optionDeparting", departingSpinner.toString())
+        intentOption.putExtra("optionLeaving", leavingSpinner.toString())
+        startActivity(intentOption)
+
+
     }
 
 

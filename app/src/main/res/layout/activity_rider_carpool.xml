@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:tools="http://schemas.android.com/tools"
+         xmlns:map="http://schemas.android.com/apk/res-auto"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         tools:context=".RiderCarpoolActivity">
+
+    <include
+            layout="@layout/top_info"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/include" map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:text="Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10" android:layout_marginTop="8dp"
+            map:layout_constraintTop_toBottomOf="@+id/include" map:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" map:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:fontFamily="@font/montserrat"
+            android:textSize="30sp" android:textColor="#6EA663"/>
+
+    <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/employeeImage"
+            android:scaleType="centerCrop" map:layout_constraintTop_toBottomOf="@+id/textView10"
+            android:layout_marginEnd="16dp" map:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="16dp" android:layout_marginTop="8dp" map:srcCompat="@drawable/avatartwo"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/employeeName"
+            tools:text="Roberto Esparza"
+            android:textSize="24sp" android:fontFamily="@font/montserrat"
+            map:layout_constraintTop_toTopOf="@+id/employeeImage"
+            map:layout_constraintStart_toStartOf="@+id/map"
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/employeeField"
+            tools:text="Starting from Plaza del Sol" android:textSize="18sp" android:fontFamily="@font/montserrat"
+            map:layout_constraintTop_toBottomOf="@+id/employeeName"
+            map:layout_constraintStart_toStartOf="@+id/employeeName"/>
+
+
+    <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginTop="16dp"
+            map:layout_constraintTop_toBottomOf="@+id/employeeImage"/>
+
+    <TextView
+            android:text="Departing Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/departingTimeView" android:layout_marginTop="8dp"
+            map:layout_constraintTop_toBottomOf="@+id/map" map:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp" android:textColor="#3F51B5"/>
+
+    <TextView
+            android:text="09:20 hrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hoursTextView" android:layout_marginTop="8dp"
+            map:layout_constraintTop_toBottomOf="@+id/departingTimeView"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp" android:textColor="#6EA663" android:layout_marginStart="8dp"
+            map:layout_constraintStart_toStartOf="@+id/departingTimeView" android:layout_marginLeft="8dp"/>
+
+    <TextView
+            android:text="Cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/costTextView"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp" android:textColor="#3F51B5"
+            map:layout_constraintTop_toTopOf="@+id/departingTimeView" android:layout_marginEnd="16dp"
+            map:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="16dp"/>
+
+    <TextView
+            android:text="32 Gems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gemsTextView" android:layout_marginTop="8dp"
+            map:layout_constraintTop_toBottomOf="@+id/costTextView"
+            android:fontFamily="@font/montserrat"
+            android:textSize="18sp" android:textColor="#6EA663"
+            map:layout_constraintEnd_toEndOf="@+id/costTextView"
+    />
+
+    <Button
+            android:text="Set Trip"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/setTripBtn" android:layout_marginTop="16dp"
+            map:layout_constraintTop_toBottomOf="@+id/hoursTextView"
+            map:layout_constraintStart_toStartOf="@+id/departingTimeView"
+            map:layout_constraintEnd_toEndOf="@+id/costTextView"
+            android:onClick="setTripClicked" android:background="#3F51B5" android:textColor="#fff"
+            android:textSize="18sp" android:fontFamily="@font/montserrat"/>
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/linearLayout2"
+            map:layout_constraintBottom_toBottomOf="parent" map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent">
+
+        <Button
+                android:text="Home"
+                android:layout_width="193dp"
+                android:layout_height="match_parent"
+                android:id="@+id/homeBtn"
+                android:background="#3F51B5" android:textColor="#fff"
+                android:textSize="18sp" android:fontFamily="@font/montserrat" android:onClick="goHomeBtn"/>
+        <Button
+                android:text="Freco Play"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/frescoBtn"
+                android:background="#3F51B5" android:fontFamily="@font/montserrat" android:textColor="#fff"
+                android:textSize="18sp" tools:layout_editor_absoluteX="299dp" android:onClick="goFrescoBtn"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
