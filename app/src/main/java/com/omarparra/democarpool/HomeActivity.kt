@@ -23,7 +23,8 @@ class HomeActivity : AppCompatActivity() {
 
     fun parkingLotSelected (view : View) {
 
-        //add parking lot task
+        val intentParkingLot = Intent(this, ParkingLotActivity::class.java)
+        startActivity(intentParkingLot)
 
     }
 

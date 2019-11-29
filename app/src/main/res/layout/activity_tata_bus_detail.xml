@@ -105,12 +105,12 @@
             android:text="Set Trip"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:id="@+id/setTripBtn" android:layout_marginTop="16dp"
+            android:id="@+id/getRiderBtn" android:layout_marginTop="16dp"
             map:layout_constraintTop_toBottomOf="@+id/hoursTextView"
             map:layout_constraintStart_toStartOf="@+id/departingTimeView"
             map:layout_constraintEnd_toEndOf="@+id/costTextView"
             android:background="#3F51B5" android:textColor="#fff"
-            android:textSize="18sp" android:fontFamily="@font/montserrat"/>
+            android:textSize="18sp" android:fontFamily="@font/montserrat" android:onClick="setBusTrip"/>
 
 
     <LinearLayout

@@ -2,6 +2,7 @@ package com.omarparra.democarpool
 
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,13 @@ import com.google.android.gms.maps.model.*
 class TataBusDetailActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
+
+    fun setBusTrip ( view: View ) {
+
+        val intentMap = Intent(android.content.Intent.ACTION_VIEW,
+            Uri.parse("https://www.google.com.mx/maps/dir/20.7383732,-103.4037342/Tata+Consultancy+Services,+Av.+Paseo+del+Nte.+4495B,+Technology+Park,+45222+Zapopan,+Jal.,+M%C3%A9xico/@20.7284114,-103.4812865,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x8428a88d1e3e22e7:0xb7d1adb6289278aa!2m2!1d-103.4877052!2d20.7258177"))
+        startActivity(intentMap)
+    }
 
 
     fun goHomeBtn(view: View) {

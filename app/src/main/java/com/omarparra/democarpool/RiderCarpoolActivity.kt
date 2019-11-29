@@ -19,8 +19,6 @@ class RiderCarpoolActivity : AppCompatActivity(), OnMapReadyCallback {
     fun setTripClicked(view: View) {
 
         val intentRiderNotification = Intent(this, RiderNotificationActivity::class.java)
-        intentRiderNotification.putExtra("userName",  "employeeName")
-        setResult(Activity.RESULT_OK, intentRiderNotification)
         startActivity(intentRiderNotification)
 
     }
