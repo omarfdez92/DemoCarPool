@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_option.*
+import kotlinx.android.synthetic.main.activity_option.listViewBuses
+import kotlinx.android.synthetic.main.activity_tata_bus.*
 
 class OptionActivity : AppCompatActivity() {
 
     lateinit var adapter : PersonAdapter
+    lateinit var adapter1 : BusAdapter
 
     fun goHomeBtn(view : View) {
 
@@ -40,6 +43,19 @@ class OptionActivity : AppCompatActivity() {
             intentRiderCarpool.putExtra("employeeName", employee.name)
             intentRiderCarpool.putExtra("employeeField", employee.tcsLocation)
             startActivity(intentRiderCarpool)
+
+        }
+
+        adapter1 = BusAdapter(this, DataService.buses)
+        listViewBuses.adapter = adapter1
+
+        listViewBuses.setOnItemClickListener { parent, view, position, id ->
+            val bus = DataService.buses[position]
+
+            val intentBusCarpool = Intent(this, TataBusDetailActivity::class.java)
+            intentBusCarpool.putExtra("busName", bus.name)
+            intentBusCarpool.putExtra("busLocation", bus.startLocation)
+            startActivity(intentBusCarpool)
 
         }
 

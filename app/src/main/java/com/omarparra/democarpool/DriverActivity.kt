@@ -30,7 +30,10 @@ class DriverActivity : AppCompatActivity() {
     }
 
     fun setSchedule (view : View) {
-        // TODO...
+
+        val intentMap = Intent(this, GetRiderActivity::class.java)
+        startActivity(intentMap)
+
     }
 
     fun goHomeBtn(view : View) {

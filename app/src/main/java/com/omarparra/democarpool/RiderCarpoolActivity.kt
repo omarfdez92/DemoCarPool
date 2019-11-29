@@ -1,12 +1,16 @@
 package com.omarparra.democarpool
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.*
+import kotlinx.android.synthetic.main.activity_rider_carpool.*
+import kotlinx.android.synthetic.main.activity_rider_carpool.view.*
 
 class RiderCarpoolActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -14,7 +18,10 @@ class RiderCarpoolActivity : AppCompatActivity(), OnMapReadyCallback {
 
     fun setTripClicked(view: View) {
 
-        //btn TODO....
+        val intentRiderNotification = Intent(this, RiderNotificationActivity::class.java)
+        intentRiderNotification.putExtra("userName",  "employeeName")
+        setResult(Activity.RESULT_OK, intentRiderNotification)
+        startActivity(intentRiderNotification)
 
     }
 
@@ -80,6 +87,14 @@ class RiderCarpoolActivity : AppCompatActivity(), OnMapReadyCallback {
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(plazaGalerias, 10.3f))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(tcsDestination, 10.3f))
+
+
+        val line : Polyline = mMap.addPolyline(
+            PolylineOptions()
+                .add( plazaGalerias, tcsDestination )
+                .width(5.5f)
+                .color(Color.BLUE)
+                .geodesic(true))
 
     }
 

@@ -35,11 +35,9 @@ class RiderActivity : AppCompatActivity() {
         //when they sent the data to next intent or data base this will work
         val intentOption = Intent(this, OptionActivity::class.java)
         intentOption.putExtra("optionDestination", originEditText.toString())
-        intentOption.putExtra("optionDate", dateTv.toString())
         intentOption.putExtra("optionDeparting", departingSpinner.toString())
         intentOption.putExtra("optionLeaving", leavingSpinner.toString())
         startActivity(intentOption)
-
 
     }
 
@@ -61,24 +59,6 @@ class RiderActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rider)
-
-        val mPickTimeBtn = findViewById<Button>(R.id.pickDateBtn)
-        val textView     = findViewById<TextView>(R.id.dateTv)
-
-        val c = Calendar.getInstance()
-        val year = c.get(Calendar.YEAR)
-        val month = c.get(Calendar.MONTH)
-        val day = c.get(Calendar.DAY_OF_MONTH)
-
-        mPickTimeBtn.setOnClickListener {
-
-            val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
-                // Display Selected date in TextView
-                textView.setText("" + dayOfMonth + " " + month + ", " + year)
-            }, year, month, day)
-            dpd.show()
-
-        }
 
         val departingSpinner: Spinner = findViewById(R.id.departingSpinner)
 
@@ -102,6 +82,16 @@ class RiderActivity : AppCompatActivity() {
                 leavingSpinner.adapter = adapter
             }
 
+        val dayToChoose : Spinner = findViewById(R.id.dayToChoose)
+
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter.createFromResource(this, R.array.days_nextweek, android.R.layout.simple_spinner_item)
+            .also { adapter ->
+                // Specify the layout to use when the list of choices appears
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+                // Apply the adapter to the spinner
+                dayToChoose.adapter = adapter
+            }
 
     }
 
